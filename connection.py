@@ -9,6 +9,7 @@ def scrape():
         for i in inquiry:
             website = i.strip()
             status = requests.get(website).status_code
+            print(status)
             if status == 200:
                 list_status.append([website, "Working"])
             else:
